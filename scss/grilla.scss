@@ -1,0 +1,111 @@
+//Variable de grilla
+$cantidadColumnas: 12;
+$anchoTotal: 100%;
+//Variables con Media Queries en formato string
+$pantalla-chica: "only screen and (min-width:0px) and (max-width: 639px)";
+$pantalla-mediana: "only screen and (min-width:640px) and (max-width: 1023px)";
+$pantalla-grande: "only screen and (min-width:1024px)";
+//Variables con valores en pixeles para despues definir el Root Em o rem
+//de cada tamano de pantalla
+$valorRemSm: 16px;
+$valorRemMd: 18px;
+$valorRemXl: 20px;
+// Funcion que toma un valor por parametro
+//en pixeles y devuelve el equivalente en rem
+@function calcularRem($tamano) {
+   @if #{pantalla-chica}{
+    $tamanoRem: $tamano / $valorRemSm;
+    @return #{$tamanoRem}rem;
+  }
+  @else if #{pantalla-mediana} {
+    $tamanoRem: $tamano / $valorRemMd;
+    @return #{$tamanoRem}rem;
+  }
+  @else if #{pantalla-grande} {
+    $tamanoRem: $tamano / $valorRemXl;
+    @return #{$tamanoRem}rem;
+  }
+}
+//Mixin que acomoda la flotacion de los elementos
+@mixin clearfix {
+  *zoom: 1;
+  &::after,
+  &::before {
+    content: " ";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+// Contenedor
+.contenedor {
+  margin: 0 auto;
+  max-width: calcularRem(960px);
+  width: 100%;
+  padding-left: calcularRem(8px);
+  padding-right: calcularRem(8px);
+}
+.contenedor-total{
+  margin: 0 auto;
+  width: 100%;
+  //padding-left: calcularRem(8px);
+  //padding-right: calcularRem(8px);
+}
+// Fila
+.fila {
+  .fila {
+    margin-bottom: calcularRem(0px);
+  }
+  @include clearfix();
+  margin-bottom: calcularRem(16px);
+  width: 100%;
+}
+//Pantalla Chica
+@media #{$pantalla-chica} {
+  html {
+    font-size: $valorRemSm;
+  }
+  .columna {
+    float: left;
+    padding: calcularRem(8px);
+    // Columnas
+    @for $i from 1 through $cantidadColumnas{
+      &.sm-#{$i} {
+        width: $anchoTotal*$i / $cantidadColumnas;
+      }
+    }
+  }
+}
+//Pantalla Mediana
+@media #{$pantalla-mediana} {
+  html {
+    font-size: $valorRemMd;
+  }
+  .columna {
+    float: left;
+    padding: calcularRem(8px);
+    // Columnas
+    @for $i from 1 through $cantidadColumnas{
+      &.md-#{$i} {
+        width: $anchoTotal*$i / $cantidadColumnas;
+      }
+    }
+  }
+}
+//Pantalla Grande
+@media #{$pantalla-grande} {
+  html {
+    font-size: $valorRemXl;
+  }
+  .columna {
+    float: left;
+    padding: calcularRem(8px);
+    // Columnas
+    @for $i from 1 through $cantidadColumnas{
+      &.xl-#{$i} {
+        width: $anchoTotal*$i / $cantidadColumnas;
+      }
+    }
+  }
+}

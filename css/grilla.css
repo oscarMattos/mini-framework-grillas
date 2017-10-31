@@ -1,0 +1,169 @@
+.contenedor {
+  margin: 0 auto;
+  max-width: 60rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.contenedor-total {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.fila {
+  *zoom: 1;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.fila .fila {
+  margin-bottom: 0rem;
+}
+.fila::after, .fila::before {
+  content: " ";
+  display: table;
+}
+.fila::after {
+  clear: both;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+  html {
+    font-size: 16px;
+  }
+
+  .columna {
+    float: left;
+    padding: 0.5rem;
+  }
+  .columna.sm-1 {
+    width: 8.33333%;
+  }
+  .columna.sm-2 {
+    width: 16.66667%;
+  }
+  .columna.sm-3 {
+    width: 25%;
+  }
+  .columna.sm-4 {
+    width: 33.33333%;
+  }
+  .columna.sm-5 {
+    width: 41.66667%;
+  }
+  .columna.sm-6 {
+    width: 50%;
+  }
+  .columna.sm-7 {
+    width: 58.33333%;
+  }
+  .columna.sm-8 {
+    width: 66.66667%;
+  }
+  .columna.sm-9 {
+    width: 75%;
+  }
+  .columna.sm-10 {
+    width: 83.33333%;
+  }
+  .columna.sm-11 {
+    width: 91.66667%;
+  }
+  .columna.sm-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  html {
+    font-size: 18px;
+  }
+
+  .columna {
+    float: left;
+    padding: 0.5rem;
+  }
+  .columna.md-1 {
+    width: 8.33333%;
+  }
+  .columna.md-2 {
+    width: 16.66667%;
+  }
+  .columna.md-3 {
+    width: 25%;
+  }
+  .columna.md-4 {
+    width: 33.33333%;
+  }
+  .columna.md-5 {
+    width: 41.66667%;
+  }
+  .columna.md-6 {
+    width: 50%;
+  }
+  .columna.md-7 {
+    width: 58.33333%;
+  }
+  .columna.md-8 {
+    width: 66.66667%;
+  }
+  .columna.md-9 {
+    width: 75%;
+  }
+  .columna.md-10 {
+    width: 83.33333%;
+  }
+  .columna.md-11 {
+    width: 91.66667%;
+  }
+  .columna.md-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  .columna {
+    float: left;
+    padding: 0.5rem;
+  }
+  .columna.xl-1 {
+    width: 8.33333%;
+  }
+  .columna.xl-2 {
+    width: 16.66667%;
+  }
+  .columna.xl-3 {
+    width: 25%;
+  }
+  .columna.xl-4 {
+    width: 33.33333%;
+  }
+  .columna.xl-5 {
+    width: 41.66667%;
+  }
+  .columna.xl-6 {
+    width: 50%;
+  }
+  .columna.xl-7 {
+    width: 58.33333%;
+  }
+  .columna.xl-8 {
+    width: 66.66667%;
+  }
+  .columna.xl-9 {
+    width: 75%;
+  }
+  .columna.xl-10 {
+    width: 83.33333%;
+  }
+  .columna.xl-11 {
+    width: 91.66667%;
+  }
+  .columna.xl-12 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=grilla.css.map */

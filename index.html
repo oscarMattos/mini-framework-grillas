@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini Framework de Grillas</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/box-sizing.css">
+  <link rel="stylesheet" href="css/grilla.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="contenedor-total">
+
+    <div class="fila">
+      <div class="columna sm-12 md-12 xl-12">
+        <h2>Clases</h2>
+        <p>
+          <b>contenedor-total</b>:
+          <br>
+          Contenedor que tiene un ancho 100% de la pantalla
+        </p>
+        <p>
+          <b>contenedor</b>:
+          <br>
+          Contenedor que tiene 960px de ancho de la pantalla (está centrado)
+        </p>
+        <p>
+          <b>fila</b>:
+          <br>
+          Tiene un 100% de su contenedor (contenedor o contenedor-total)
+        </p>
+        <p>
+          <b>columna</b>:
+          <br>
+          Defina que va a haber una columna
+        </p>
+        <p>
+          <b>sm-1</b> a <b>sm-12</b>:
+          <br>
+          (<i>Movil</i>) Clases para definir que tipo de columna queremos (de 1 hasta 12 columnas)
+          <br>
+          La cantidad de columnas se puede cambiar desde la variable, $cantidadColumnas, de Sass en el archivos grilla.scss
+        </p>
+        <p>
+          <b>md-1</b> a <b>md-12</b>:
+          <br>
+          (<i>Tablet</i>) Clases para definir que tipo de columna queremos (de 1 hasta 12 columnas)
+          <br>
+          La cantidad de columnas se puede cambiar desde la variable, $cantidadColumnas, de Sass en el archivos grilla.scss
+        </p>
+        <p>
+          <b>xl-1</b> a <b>xl-12</b>:
+          <br>
+          (<i>Escritorio</i>) Clases para definir que tipo de columna queremos (de 1 hasta 12 columnas)
+          <br>
+          La cantidad de columnas se puede cambiar desde la variable, $cantidadColumnas, de Sass en el archivos grilla.scss
+        </p>
+      </div>
+  </div>
+  <div class="fila">
+    <div class="columna sm-1 md-2 xl-3" style="background-color:#CFD8DC;">
+      <h2>Columna 1</h2>
+        <p>
+          <b>sm-1</b>
+          <br>
+          Una columna en movil
+        </p>
+        <p>
+          <b>md-2</b>
+          <br>
+          Dos columnas en tablet
+        </p>
+        <p>
+          <b>xl-3</b>
+          <br>
+          Tres columnas en escritorio
+        </p>
+    </div>
+    <div class="columna sm-2 md-3 xl-1" style="background-color:#90A4AE;">
+      <h2>Columna 2</h2>
+      <p>
+        <b>sm-2</b>
+        <br>
+        Dos columnas en movil
+      </p>
+      <p>
+        <b>md-3</b>
+        <br>
+        Tres columnas en tablet
+      </p>
+      <p>
+        <b>xl-1</b>
+        <br>
+        Una columna en escritorio
+      </p>
+    </div>
+    <div class="columna sm-3 md-1 xl-2" style="background-color:#607D8B;">
+      <h2>Columna 3</h2>
+      <p>
+        <b>sm-3</b>
+        <br>
+        Tres columnas en movil
+      </p>
+      <p>
+        <b>md-1</b>
+        <br>
+        Una columna en tablet
+      </p>
+      <p>
+        <b>xl-2</b>
+        <br>
+        Dos columnas en escritorio
+      </p>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="columna sm-4 md-4 xl-4" style="background-color:#CFD8DC;">
+      <h2>Columna 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa perspiciatis, repellendus asperiores voluptatum voluptatibus deleniti esse soluta quia iste assumenda earum sed fugit excepturi optio eius doloribus rem porro.</p>
+    </div>
+    <div class="columna sm-4 md-4 xl-4" style="background-color:#90A4AE;">
+      <h2>Columna 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab odio, fugiat velit autem ex earum rem magni molestias saepe repellendus assumenda doloremque veniam aperiam tempora. Debitis possimus officia, dolorem.</p>
+    </div>
+    <div class="columna sm-4 md-4 xl-4" style="background-color:#607D8B;">
+      <h2>Columna 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repellendus maxime fugiat obcaecati placeat deleniti, tempora qui aliquid ipsam earum officia ducimus sed mollitia eius aspernatur iure, nihil odio fugit!</p>
+    </div>
+  </div>
+</body>
+</html>

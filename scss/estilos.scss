@@ -1,0 +1,27 @@
+// Acá codean los estilos en Sass
+// Con este comando monitorean el archivo por cambios:
+// sass --watch scss/estilos.scss:css/estilos.css --style expanded
+// Deben estar dentro de la carpeta "mini_framework_grillas"
+
+body{
+  font-family: sans-serif;
+  color:rgba(0,0,0, .75);
+  .fila p:last-child{
+    margin-bottom: 0;
+  }
+  h2{
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  p{
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  b{
+    font-weight: bold;
+  }
+  i{
+    font-weight: lighter;
+    font-style: italic;
+  }
+}
